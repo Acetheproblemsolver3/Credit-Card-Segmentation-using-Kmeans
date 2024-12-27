@@ -1,1 +1,2 @@
 # Credit-Card-Segmentation-using-Kmeans
+This project aims to segment credit card customers into distinct groups based on their spending patterns and behaviors. By applying the K-means clustering algorithm, the project identifies key customer segments that can help businesses tailor marketing strategies, improve customer retention, and optimize resource allocation. The analysis leverages customer transaction data, ensuring data-driven insights for better decision-making.
