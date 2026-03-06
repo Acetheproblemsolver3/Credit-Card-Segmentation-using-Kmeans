@@ -80,6 +80,8 @@ Using the Elbow Method, the optimal number of clusters was determined to be **6*
 
 These clusters represent customers with different credit card usage patterns.
 
+The segmentation helps financial institutions better understand customer behavior and tailor marketing, credit limits, and financial products accordingly.
+
 Example segment characteristics include:
 
 **Cluster 1 – High Value Customers**
