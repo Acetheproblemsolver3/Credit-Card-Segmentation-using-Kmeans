@@ -2,128 +2,129 @@
 
 ## Project Overview
 
-Customer segmentation is an important analytics task for financial institutions. By grouping customers with similar credit card usage behavior, banks can design targeted marketing strategies, adjust credit limits, and better understand spending patterns.
+Customer segmentation is an important analytical task for financial institutions. By grouping customers with similar credit card usage behavior, banks can design targeted marketing strategies, personalize financial products, and better understand spending patterns.
 
-This project applies **unsupervised learning using the K-Means clustering algorithm** to segment credit card customers based on their financial behavior and transaction patterns.
+This project applies **K-Means clustering**, an unsupervised machine learning algorithm, to segment credit card customers based on their financial behavior and transaction patterns.
 
-The goal is to identify distinct customer groups that share similar credit usage characteristics.
+The goal is to identify meaningful customer groups that share similar credit usage characteristics.
 
 ---
 
 ## Dataset
 
-The dataset used for this project comes from Kaggle.
+The dataset used in this project contains **credit card usage behavior of customers over a six-month period**.
 
-It summarizes the **usage behavior of approximately 9000 active credit card holders over a period of six months**, with multiple behavioral variables describing spending and account activity. :contentReference[oaicite:0]{index=0}
+Dataset source:
 
-Dataset link:  
 https://www.kaggle.com/datasets/arjunbhasin2013/ccdata
 
-Examples of features in the dataset include:
+Key features in the dataset include:
 
-- Balance
-- Purchases
-- Cash Advance
-- Credit Limit
-- Payments
-- Minimum Payments
-- Purchase Frequency
-- Cash Advance Frequency
+- BALANCE – Remaining balance on the credit card
+- PURCHASES – Total purchase amount
+- CASH_ADVANCE – Cash withdrawn using the credit card
+- CREDIT_LIMIT – Maximum credit limit
+- PAYMENTS – Total payments made
+- PURCHASE_FREQUENCY – Frequency of purchases
+- CASH_ADVANCE_FREQUENCY – Frequency of cash withdrawals
 
-These variables represent how customers use their credit cards.
+These variables describe how customers interact with their credit cards.
 
 ---
 
 ## Methodology
 
-The following steps were performed during the analysis:
+The analysis followed these steps:
 
 ### 1. Data Preprocessing
 
-- Removed unnecessary identifiers
-- Handled missing values
-- Normalized features to ensure equal scaling
+- Missing values were handled
+- Unnecessary identifiers were removed
+- Features were scaled using **StandardScaler**
 
-Scaling is important because **K-Means relies on Euclidean distance**, making it sensitive to differences in feature magnitude. :contentReference[oaicite:1]{index=1}
+Feature scaling is important because **K-Means relies on distance calculations**, which can be affected if variables are on different scales.
 
 ---
 
-### 2. Exploratory Data Analysis
+### 2. Exploratory Data Analysis (EDA)
 
-Initial analysis was conducted to understand:
+Exploratory analysis was performed to understand:
 
-- spending patterns
+- distribution of financial variables
+- customer spending patterns
 - credit usage behavior
-- distribution of financial features
+
+Visualization libraries such as **Matplotlib** and **Seaborn** were used.
 
 ---
 
-### 3. Determining the Optimal Number of Clusters
+### 3. Determining Optimal Number of Clusters
 
-The **Elbow Method** was used to determine the appropriate number of clusters for K-Means.
+The **Elbow Method** was used to determine the optimal number of clusters.
 
-The elbow point indicates where adding more clusters does not significantly improve clustering performance.
+Inertia values were calculated for cluster values ranging from **1 to 10**, and the elbow point was used to determine the most appropriate number of clusters.
 
 ---
 
 ### 4. Customer Segmentation using K-Means
 
-The K-Means clustering algorithm was applied to group customers into segments based on behavioral similarity.
+After scaling the dataset, the **K-Means algorithm** was applied to segment customers.
 
-Customers with similar spending and credit usage characteristics are grouped together.
+The analysis resulted in **6 distinct customer clusters**, representing groups of customers with similar financial behavior.
 
 ---
 
 ## Results
 
-The clustering algorithm successfully identified distinct customer segments with different credit usage patterns.
+The clustering algorithm identified **six customer segments** based on credit card usage patterns.
 
-Example cluster characteristics include:
+Examples of potential cluster characteristics include:
 
-**Cluster 1 – High Value Customers**
+**Cluster 1 — High Value Customers**
 
 - High credit limits
-- High purchase frequency
-- High transaction amounts
+- Frequent purchases
+- Higher spending levels
 
-**Cluster 2 – Low Activity Customers**
+**Cluster 2 — Low Activity Customers**
 
+- Low transaction frequency
 - Low credit utilization
-- Few transactions
 - Minimal spending
 
-**Cluster 3 – Cash Advance Users**
+**Cluster 3 — Cash Advance Users**
 
 - Frequent cash withdrawals
-- Higher balances
-- Moderate purchase activity
+- Higher outstanding balances
 
-These segments can help financial institutions understand customer behavior and tailor services accordingly.
+These segments help organizations better understand how different customers interact with their credit products.
 
 ---
 
 ## Visualization
 
-The clustering results were visualized using dimensionality reduction techniques to display customer groups in two-dimensional space.
+The clustering process includes visual analysis such as:
 
-Example visualizations include:
+- Elbow Method plot (Inertia vs Number of Clusters)
+- Cluster distribution visualizations
 
-- Elbow Method plot
-- Cluster scatter plots
+Example:
+
+![Elbow Method](outputs/elbow_method.png)
 
 ---
 
 ## Business Applications
 
-Credit card customer segmentation can support several business decisions:
+Customer segmentation can support several business decisions:
 
 - Targeted marketing campaigns
 - Customer retention strategies
-- Credit risk monitoring
+- Credit limit adjustments
 - Personalized financial products
-- Credit limit optimization
+- Customer risk monitoring
 
-Banks commonly use segmentation analytics to better understand customer financial behavior.
+Financial institutions often use segmentation analytics to improve decision-making and customer experience.
 
 ---
 
@@ -135,6 +136,7 @@ Banks commonly use segmentation analytics to better understand customer financia
 - Scikit-learn
 - Matplotlib
 - Seaborn
+- Jupyter Notebook
 
 ---
 
@@ -142,10 +144,10 @@ Banks commonly use segmentation analytics to better understand customer financia
 
 Potential improvements to this project include:
 
-- Using **Silhouette Score** to evaluate clustering quality
-- Testing other clustering algorithms (DBSCAN, Hierarchical Clustering)
-- Applying **PCA for better cluster visualization**
-- Building customer personas for each cluster
+- Evaluating cluster quality using **Silhouette Score**
+- Applying **PCA for improved cluster visualization**
+- Comparing clustering algorithms such as **DBSCAN or Hierarchical Clustering**
+- Creating detailed customer personas for each cluster
 
 ---
 
@@ -153,8 +155,5 @@ Potential improvements to this project include:
 
 1. Clone the repository
 
-2. Install required dependencies
-
-3. Open the notebook inside the notebooks folder and run the analysis.
-
----
+```bash
+git clone https://github.com/Acetheproblemsolver3/Credit-Card-Segmentation-using-Kmeans
