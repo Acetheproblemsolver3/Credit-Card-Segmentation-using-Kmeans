@@ -152,3 +152,9 @@ Potential improvements to this project include:
 ## How to Run the Project
 
 1. Clone the repository
+
+2. Install required dependencies
+
+3. Open the notebook inside the notebooks folder and run the analysis.
+
+---
