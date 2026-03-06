@@ -76,28 +76,38 @@ The analysis resulted in **6 distinct customer clusters**, representing groups o
 
 ## Results
 
-The clustering algorithm identified **six customer segments** based on credit card usage patterns.
+Using the Elbow Method, the optimal number of clusters was determined to be **6**. The K-Means algorithm was then applied to segment the credit card customers into six distinct groups based on their financial behavior.
 
-Examples of potential cluster characteristics include:
+These clusters represent customers with different credit card usage patterns.
 
-**Cluster 1 — High Value Customers**
+Example segment characteristics include:
 
+**Cluster 1 – High Value Customers**
 - High credit limits
-- Frequent purchases
-- Higher spending levels
+- High purchase amounts
+- Frequent transactions
 
-**Cluster 2 — Low Activity Customers**
+**Cluster 2 – Moderate Users**
+- Moderate spending
+- Regular credit usage
+- Stable payment behavior
 
+**Cluster 3 – Low Activity Customers**
 - Low transaction frequency
-- Low credit utilization
 - Minimal spending
+- Low credit utilization
 
-**Cluster 3 — Cash Advance Users**
-
+**Cluster 4 – Cash Advance Users**
 - Frequent cash withdrawals
-- Higher outstanding balances
+- Higher balances
 
-These segments help organizations better understand how different customers interact with their credit products.
+**Cluster 5 – High Balance Customers**
+- Large outstanding balances
+- Higher credit usage
+
+**Cluster 6 – Occasional Users**
+- Infrequent purchases
+- Low balance and low usage
 
 ---
 
