@@ -154,6 +154,5 @@ Potential improvements to this project include:
 ## How to Run the Project
 
 1. Clone the repository
-
-```bash
-git clone https://github.com/Acetheproblemsolver3/Credit-Card-Segmentation-using-Kmeans
+2. Install dependencies
+3. Open the notebook and run the analysis.
